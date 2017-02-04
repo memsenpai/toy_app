@@ -10,7 +10,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  <%= link_to 'New Micropost', new_micropost_path ,:id=>"newmicropost",:class => "micro"%>
   <tbody>
     <% @microposts.each do |micropost| %>
       <tr>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Micropost', new_micropost_path %>
+
