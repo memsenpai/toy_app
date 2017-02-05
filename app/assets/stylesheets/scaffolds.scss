@@ -7,6 +7,7 @@ body {
   line-height: 18px;
   margin: 33px;
 }
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -20,61 +21,38 @@ pre {
   font-size: 11px;
 }
 
-
-
-#new{
-  padding: 10px;
-  border: 1px dotted;
-  background: orangered;
-
-}
-#newmicropost{
-  padding: 10px;
-  border: 2px solid;
-  background-color: orangered;
-}
-#error_explanation{
-  &:hover{
-    background-color: chocolate;
-  }
-  &:hover h2{
-    background-color: black;
-  }
-  &:hover li{
-    font-size: large;
-  }
-}
-
 a {
-
+  padding: 10px;
   color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
+  border: 2px solid;
+  border-color: transparent;
   &:hover {
     color: #fff;
-    background-color: #000;
 
+    border-color: #2E2F30;
+    background: orange;
+    position: relative;
   }
 
-
 }
-h1{
+
+h1 {
   color: green;
   text-align: center;
 }
-table{
+
+table {
   margin: 0px auto;
 }
-tbody{
+
+tbody {
 
 }
+
 th {
 
   padding-bottom: 5px;
-  border:1px solid ;
+  border: 1px solid;
   background: orange;
 }
 
@@ -82,23 +60,66 @@ td {
   padding-bottom: 7px;
   padding-left: 5px;
   padding-right: 5px;
+  border: 1px solid;
+}
+
+h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+label {
+  display: block;
 }
 
 div {
+  text-align: center;
   &.field, &.actions {
     margin-bottom: 10px;
+  }
+}
+
+#new, #newmicropost {
+  padding: 10px;
+  border: 1px dotted;
+  background: orangered;
+
+}
+
+#new:hover, #newmicropost:hover {
+  background-color: black;
+}
+
+#options:hover {
+  background-color: green;
+}
+
+#error_explanation {
+  &:hover {
+    background-color: chocolate;
+  }
+  &:hover h2 {
+    background-color: black;
+  }
+  &:hover li {
+    font-size: large;
   }
 }
 
 #notice {
   color: green;
   background: orangered;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
 }
 
 #error_explanation {
@@ -108,23 +129,18 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
-  }
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
 }
 
-label {
-  display: block;
+#submit {
+  padding: 10px;
+  background-color: green;
+  color: white;
 }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+

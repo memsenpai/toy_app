@@ -4,26 +4,27 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Micropost</th>
+    <th colspan="3">Options</th>
+  </tr>
   </thead>
-  <%=  link_to 'New User', new_user_path ,:id=>"new" %>
+  <%= link_to 'New User', new_user_path, :id => "new" %>
   <tbody>
   <% if @users.any? %>
-    <% @users.each do |user|  %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.microposts.first.content %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-    <% end %>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.microposts.first.try(:content) %></td>
+            <td id="options"><%= link_to 'Show', user %></td>
+            <td id="options"><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td id="options"><%= link_to 'Destroy', user, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+      <% end %>
+  <% end %>
   </tbody>
 </table>
 
