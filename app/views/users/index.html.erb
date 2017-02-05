@@ -12,6 +12,7 @@
   </tr>
   </thead>
   <%= link_to 'New User', new_user_path, :id => "new" %>
+  <%= link_to 'Microposts', '/microposts', :id => "new" %>
   <tbody>
   <% if @users.any? %>
       <% @users.each do |user| %>
@@ -19,7 +20,7 @@
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td><% if user.microposts.any? %>
-              <%= user.microposts.first.try(:content) %>
+              <%= user.microposts.first.content %>
               <% else %>
                   <h2>None</h2>
               <%end%>

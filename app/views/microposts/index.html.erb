@@ -11,6 +11,7 @@
     </tr>
   </thead>
   <%= link_to 'New Micropost', new_micropost_path ,:id=>"newmicropost",:class => "micro"%>
+  <%= link_to 'Back','/users',:id=>"newmicropost",:class => "micro" %>
   <tbody>
     <% @microposts.each do |micropost| %>
       <tr>
