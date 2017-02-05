@@ -84,6 +84,7 @@ label {
 }
 
 div {
+  margin: auto;
   text-align: center;
   &.field, &.actions {
     margin-bottom: 10px;
@@ -137,11 +138,12 @@ div {
   color: white;
 }
 
-.field_with_errors {
-  text-align: center;
+.field_with_errors{
+
   padding: 2px;
+display: table;
   background-color: red;
-  display: table;
+
 }
 
 
